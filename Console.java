@@ -237,7 +237,7 @@ public class Console {
 	}
 
 	public void initial() {
-		println("M-OS", new Color(155, 155, 255));
+		println("A1Terminal", new Color(155, 155, 255));
 		println("One tool for all operating system.", new Color(155, 155, 255));
 		println("Type 'help' for more information. \n", new Color(155, 155, 255));
 	}
@@ -254,13 +254,11 @@ public class Console {
 					Path conPath = Paths.get(path + "//" + commands[1]);
 					path = conPath.toString();
 					println(path, Color.CYAN);
-					// StringBuffer sb = new StringBuffer(path);
-					// path = sb.append("\\").toString();
 				} else {
 					error("File doesn't exist");
 				}
 			} else {
-				error("Please pass a additional arguement to open the folder");
+				error("Please pass an additional arguement to open the folder");
 			}
 		} else if (commands[0].equals("cd..")) {
 			File theFile = new File(path);
@@ -294,7 +292,7 @@ public class Console {
 					error(ex.getMessage());
 				}
 			} else {
-				error("Please pass a additional arguement to print the file");
+				error("Please pass an additional arguement to print the file");
 			}
 		} else if (commands[0].equalsIgnoreCase("run")) {
 			if (commands.length > 1) {
@@ -311,7 +309,7 @@ public class Console {
 					error(e.getMessage());
 				}
 			} else {
-				error("Please pass a additional arguement to run");
+				error("Please pass an additional arguement to run");
 			}
 		} else if (commands[0].equalsIgnoreCase("help")) {
 			help();
@@ -330,7 +328,7 @@ public class Console {
 					error("File name already exists");
 				}
 			} else {
-				error("Please pass a additional arguement to create a folder");
+				error("Please pass an additional arguement to create a folder");
 				println(path, Color.CYAN);
 			}
 		} else if (commands[0].equalsIgnoreCase("rmdir")) {
@@ -341,7 +339,7 @@ public class Console {
 				println(path, Color.CYAN);
 
 			} else {
-				error("Please pass a additional arguement to create a folder");
+				error("Please pass an additional arguement to create a folder");
 			}
 		} else if (commands[0].equalsIgnoreCase("clear")) {
 			clear();
